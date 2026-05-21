@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#081120;
+  color:white;
+  font-family:'Poppins', sans-serif;
+}
+
+.not-found{
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:2rem;
+
+  background:#081120;
+}
+
+/* HERO */
+
+.trip-hero{
+  position:relative;
+
+  height:100vh;
+
+  overflow:hidden;
+}
+
+.trip-hero img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:brightness(0.35);
+}
+
+.hero-overlay{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:0 80px;
+}
+
+/* HERO TEXT */
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero-content p{
+  letter-spacing:5px;
+
+  margin-bottom:25px;
+
+  color:#d1d5db;
+
+  font-size:0.85rem;
+}
+
+.hero-content h1{
+  font-size:6rem;
+
+  line-height:1;
+
+  font-family:'Playfair Display', serif;
+
+  margin-bottom:30px;
+}
+
+.hero-content span{
+  line-height:1.9;
+
+  color:#e5e7eb;
+
+  font-size:1.05rem;
+}
+
+/* FLOATING CARD */
+
+.floating-card{
+  width:340px;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.floating-card h3{
+  color:#d1d5db;
+
+  margin-bottom:15px;
+}
+
+.floating-card h2{
+  font-size:3rem;
+
+  margin-bottom:30px;
+
+  font-family:'Playfair Display', serif;
+}
+
+.floating-items{
+  margin-bottom:30px;
+}
+
+.floating-items p{
+  margin-bottom:14px;
+
+  color:#e5e7eb;
+}
+
+.floating-card button{
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:#8b5cf6;
+
+  color:white;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.floating-card button:hover{
+  background:#a78bfa;
+}
+
+.floating-card button:disabled{
+  opacity:0.72;
+  cursor:not-allowed;
+}
+
+.payment-status{
+  margin-top:18px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(139,92,246,0.18);
+  color:#ede9fe;
+  line-height:1.5;
+  font-size:0.92rem;
+}
+
+/* QUICK INFO */
+
+.quick-info{
+  padding:80px;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:30px;
+}
+
+.info-box{
+  background:#111827;
+
+  padding:35px;
+
+  border-radius:25px;
+
+  text-align:center;
+}
+
+.info-box h3{
+  margin-bottom:15px;
+
+  font-size:1.3rem;
+}
+
+.info-box p{
+  color:#d1d5db;
+}
+
+/* TIMELINE */
+
+.timeline-section{
+  padding:40px 80px 100px;
+}
+
+.timeline-heading{
+  margin-bottom:70px;
+}
+
+.timeline-heading p{
+  letter-spacing:5px;
+
+  color:#d1d5db;
+
+  margin-bottom:20px;
+}
+
+.timeline-heading h2{
+  font-size:4rem;
+
+  font-family:'Playfair Display', serif;
+}
+
+.timeline{
+  position:relative;
+
+  padding-left:40px;
+
+  border-left:2px solid rgba(255,255,255,0.15);
+}
+
+.timeline-item{
+  position:relative;
+
+  margin-bottom:50px;
+}
+
+.timeline-dot{
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:#8b5cf6;
+
+  position:absolute;
+
+  left:-50px;
+
+  top:25px;
+}
+
+.timeline-card{
+  background:#111827;
+
+  padding:35px;
+
+  border-radius:25px;
+}
+
+.timeline-card h3{
+  margin-bottom:15px;
+
+  font-size:1.6rem;
+}
+
+.timeline-card p{
+  color:#d1d5db;
+
+  line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery-section{
+  padding:40px 80px 120px;
+}
+
+.gallery-heading{
+  margin-bottom:60px;
+}
+
+.gallery-heading p{
+  letter-spacing:5px;
+
+  color:#d1d5db;
+
+  margin-bottom:20px;
+}
+
+.gallery-heading h2{
+  font-size:4rem;
+
+  font-family:'Playfair Display', serif;
+}
+
+.gallery-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:25px;
+}
+
+.gallery-grid img{
+  width:100%;
+
+  height:350px;
+
+  object-fit:cover;
+
+  border-radius:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-overlay{
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:50px;
+
+    padding:80px 25px;
+  }
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:3.5rem;
+  }
+
+  .floating-card{
+    width:100%;
+  }
+
+  .quick-info{
+    grid-template-columns:1fr;
+
+    padding:50px 25px;
+  }
+
+  .timeline-section{
+    padding:40px 25px 80px;
+  }
+
+  .timeline-heading h2{
+    font-size:2.5rem;
+  }
+
+  .gallery-section{
+    padding:40px 25px 100px;
+  }
+
+  .gallery-heading h2{
+    font-size:2.5rem;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
