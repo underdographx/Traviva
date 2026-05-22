@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import trips from "../data/trips";
+import React from "react";
 
 const loadRazorpayScript = () =>
   new Promise((resolve) => {

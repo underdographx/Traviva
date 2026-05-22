@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../context/AuthContext";
 import { apiRequest } from "../utils/api";
+import React from "react";
 import "./Register.css";
 
 export default function Register() {

@@ -1,5 +1,5 @@
 import "./ExperienceDetails.css";
-
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import experiences from "../data/experiences";

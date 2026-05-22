@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import "./AboutPage.css";
+import React from "react";
 
 import heroImage from "../assets/anu.jpg";
 import aboutImage from "../assets/aboutanu.jpg";
