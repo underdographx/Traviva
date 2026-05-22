@@ -20,9 +20,9 @@ export default function Navbar() {
 
       <div className="nav-links">
         <NavLink to="/">Home</NavLink>
-        <a href="/#experiences">Experiences</a>
-        <a href="/about#about">About Us</a>
-        <a href="/about#contact">Contact Us</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
       </div>
 
       <div className="nav-actions">

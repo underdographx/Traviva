@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar";
 import "./AboutPage.css";
-import React from "react";
+import React, { useRef } from "react";
 
 import heroImage from "../assets/anu.jpg";
 import aboutImage from "../assets/aboutanu.jpg";
+
+import emailjs from "@emailjs/browser";
 
 import {
   FaGithub,
@@ -12,10 +14,34 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
-  FaClock,
 } from "react-icons/fa";
 
 export default function AboutPage() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_j7fn32m",
+        "template_z26ijyt",
+        form.current,
+        "H1PRdWfqRBXqSp3_5"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="about-page">
 
@@ -66,7 +92,7 @@ export default function AboutPage() {
           <h1>Anuja Yadav</h1>
 
           <h3>
-            Full Stack Developer 
+            Full Stack Developer
           </h3>
 
           <div className="hero-line"></div>
@@ -154,7 +180,6 @@ export default function AboutPage() {
 
           </div>
 
-          
         </div>
 
       </section>
@@ -235,20 +260,30 @@ export default function AboutPage() {
 
         </div>
 
-        <form className="contact-form">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
 
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            required
           />
 
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            required
           />
 
           <textarea
+            name="message"
             placeholder="Your Message"
+            required
           ></textarea>
 
           <button type="submit">
